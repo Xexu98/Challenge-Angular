@@ -1,0 +1,107 @@
+li{
+    list-style: none;
+    padding-right: 10px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+   
+#header-content
+{
+    padding: 0.2em 5%;
+    background: rgb(0, 0, 0);
+      color: aliceblue;
+}
+
+#footer-content{
+    padding: 1em 15%;
+    color: aliceblue;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    display: block;
+    background: rgb(0, 0, 0);
+    font-family:"Segoe UI";
+}
+
+#footer-colum-1{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+#footer-colum-2{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+#footer-colum-3{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+#footer-colum-4{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer-bar{
+   position: relative;
+   top: 1em;
+   height: 1.5em;
+   background: rgb(0, 0, 0);
+  
+}
+#myNav{
+    font-family:"Segoe UI";
+}
+
+.overlay {
+  
+    height: 0%;
+    width:100%;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; 
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

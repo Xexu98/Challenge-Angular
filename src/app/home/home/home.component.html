@@ -1,0 +1,105 @@
+<body>
+    
+    <body>
+		<div class="slide">
+			<div class="slide-inner">
+
+
+                <div *ngFor="let film of resultadosFilm;let i = index">
+                    <div *ngIf="i < 2">
+                        <div *ngIf="i== 0">
+
+                            <input class="slide-open" type="radio" id="slide-1" 
+                            name="slide" aria-hidden="true" hidden="" checked="checked">
+                            <div class="slide-item">
+                                <img [src]="'https://image.tmdb.org/t/p/w500'+ film.backdrop_path"  >
+                                <label class="slide-text"> {{film.title}}</label>
+                            </div>
+
+                        </div>
+                        <div *ngIf="i>0">
+
+                            <input class="slide-open" type="radio" id="slide-2" 
+                                name="slide" aria-hidden="true" hidden="">
+                            <div class="slide-item">
+                                <img [src]="'https://image.tmdb.org/t/p/w500'+ film.backdrop_path" width="" height="">
+                                <label class="slide-text">{{film.title}}</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let series of resultadosTv;let i = index">
+                    <div *ngIf="i < 2">
+                        <div *ngIf="i== 0">
+
+                            <input class="slide-open" type="radio" id="slide-3" 
+                            name="slide" aria-hidden="true" hidden="" >
+                            <div class="slide-item">
+                                <img [src]="'https://image.tmdb.org/t/p/w500'+ series.backdrop_path"  >
+                                <label class="slide-text"> {{series.name}}</label>
+                            </div>
+
+                        </div>
+                        <div *ngIf="i>0">
+
+                            <input class="slide-open" type="radio" id="slide-4" 
+                                name="slide" aria-hidden="true" hidden="">
+                            <div class="slide-item">
+                                <img [src]="'https://image.tmdb.org/t/p/w500'+ series.backdrop_path" width="" height="">
+                                <label class="slide-text">{{series.name}}</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+				<ol class="slide-indicador">
+					<li>
+						<label for="slide-1" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-2" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-3" class="slide-circulo">•</label>
+					</li>
+                    <li>
+						<label for="slide-4" class="slide-circulo">•</label>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+
+
+
+
+    <h2>Novedades</h2>
+<div *ngFor="let film of resultadosFilm;let i = index" id ="grupoPelis">
+    <div *ngIf="i < 5" id="pelis">
+        <img [src]="'https://image.tmdb.org/t/p/w500'+ film.poster_path"  [alt]="film.original_title"  width="400" height="500">
+        <p></p>
+        <b>
+            {{film.original_title}} ({{film.release_date}}) 
+        </b>
+        <p>{{5*film.vote_average/10}} </p>
+    </div>
+</div>
+<h2>Series</h2>
+<div *ngFor="let serie of resultadosTv;let i = index" id ="grupoSeries">
+    <div *ngIf="i < 5" id="series">
+        <img [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path"  [alt]="serie.name" width="400" height="500">
+        <p></p>
+        <b >
+            {{serie.name}} ({{serie.first_air_date}})
+        </b>
+        <p> {{5*serie.vote_average/10}}</p>
+    </div>
+</div>
+</body>
+
+

@@ -1,0 +1,14 @@
+<body>
+    <div *ngFor="let item of results;let i=index"  id ="pelis-busqueda"> 
+        <div *ngFor="let nombre of nombreResults;let j=index">
+            <div *ngIf="j == i">
+                <img [src]="'https://image.tmdb.org/t/p/w500'+ item.poster_path"  [alt]="nombre" width="400" height="500">
+                <p></p>
+                <b>
+                    {{nombre}} 
+                </b>
+                <p> {{5*item.vote_average/10}}</p>
+            </div>
+        </div> 
+    </div>
+</body>

@@ -1,0 +1,38 @@
+<div>
+
+</div>
+<div>
+    <div *ngIf="filmDetails != undefined" class="">
+        <img [src]="'https://image.tmdb.org/t/p/w500'+ filmDetails.backdrop_path" width="100%" height="900px">
+        <label class="slide-text"> {{filmDetails.title}}</label>
+    </div>  
+    <div style="display: inline-block;">
+        <div style="display: block;">
+            <b style="font-size:xx-large;">Director</b>
+            <p></p>
+            <div *ngIf="filmDetails != undefined">
+                <!-- <a href="">{{}}</a> -->
+            </div>  
+        </div>
+        <div style="display: block;">
+            <b style="font-size:xx-large;">Pais</b>
+            <p></p>
+            <a href=""></a>
+        </div>
+
+    </div>
+    <div>
+        <b style="font-size:xx-large;">Sinopsis</b>
+        <div *ngIf="filmDetails != undefined">
+        <p #txtSinopsis>{{filmDetails.overview}} </p>
+        </div>  
+        <button (click)="load()">Visualizar</button>
+        <button>Descargar</button>
+    </div>
+</div>
+<div> 
+    <b style="font-size:xx-large;">Reparto</b>
+    <p></p>
+    <b style="font-size:xx-large;">Tambien vieron</b>
+</div>
+

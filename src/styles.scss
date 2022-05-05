@@ -10,7 +10,19 @@ li{
     padding: 0.2em 5%;
     background: rgb(0, 0, 0);
       color: aliceblue;
+      
 }
+#pelis-busqueda{
+
+display: inline-block;
+padding: 1em 1%;
+}
+
+#resultadoBusqueda{
+  display: block;
+
+}
+
 
 #cuerpo
 {
@@ -38,10 +50,11 @@ li{
   display: block;
 }
 
-
-
-
-
+.form-control
+{
+  transform: translateX(calc((100vw - 100%)/ 1.03));
+ 
+}
 
 
 
